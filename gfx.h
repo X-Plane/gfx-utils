@@ -10,6 +10,14 @@
 #ifndef _LAMINAR_GFX_H_
 #define _LAMINAR_GFX_H_
 
+/**
+ * @header gfx.h
+ * Canvas-like API for X-Plane 12.4.4+ XPLMPanelGraphics drawing.
+ * 
+ * GFX abstracts away XPLMPanelGraphics' vertices, and instead provides you with a stateful
+ * canvas-like API to draw lines, arcs, Bézier curves, TTF- and bitmap-font text.
+ */
+
 #include <XPLMPanelGraphics.h>
 #include <stdbool.h>
 #include <stdint.h>
@@ -21,7 +29,14 @@
 extern "C" {
 #endif
 
+/**
+ * Context object, used to store the current drawing state for one window or avionics device.
+ */
 typedef struct gfx_ctx_t gfx_ctx_t;
+
+/**
+ * @group Shared state management
+ */
 
 /**
  * Initialises shared resources used by the GFX layer. Call once at plugin start.
@@ -38,6 +53,10 @@ void gfx_bake_shared();
  * Frees any memory used by GFX shared resources. Call once at plugin teardown.
  */
 void gfx_fini_shared();
+
+/**
+ * @group Color utilities.
+ */
 
 /**
  * Creates a color object from red, green, and blue 8-bit components (0-255).
@@ -59,6 +78,9 @@ uint32_t gfx_rgbf(float r, float g, float b);
  */
 uint32_t gfx_rgbaf(float r, float g, float b, float a);
 
+/**
+ * Multiplies each component of a colour by a scalar.
+ */
 uint32_t gfx_color_mult(uint32_t c, float m);
 
 /**
@@ -81,15 +103,31 @@ int32_t gfx_load_tex(const char *path);
  */
 int32_t gfx_load_tex_atlas(const char *path, int col, int row, int *w, int *h);
 
+/**
+ * @group Resource Loading
+ */
+
+/**
+ * A text alignment
+ */
 typedef enum {
+    /** The text's left boundary is aligned with the drawing position. */
     GFX_ALIGN_LEFT,
+    /** Text is centered on the drawing position. */
     GFX_ALIGN_CENTER,
+    /** The text's right boundary is aligned with the drawing position. */
     GFX_ALIGN_RIGHT,
 } gfx_text_align_t;
 
+/**
+ * Parameters used when loading a bitmap font file.
+ */
 typedef struct {
+    /** The ASCII code for the first character represented in the font atlas. */
     char        first_char;
+    /** The number of characters contained in the font atlas. */
     int32_t     char_count;
+    /** Whether the dot character is drawn at full width, or half width. */
     bool        short_dot;
 } gfx_bitmap_font_desc_t;
 
@@ -104,15 +142,6 @@ typedef struct {
  */
 int32_t gfx_load_bitmap_font(const char *path, const gfx_bitmap_font_desc_t *desc);
 
-typedef struct {
-    float x_bearing;
-    float y_bearing;
-    float width;
-    float height;
-    float x_advance;
-    float y_advance;
-} gfx_text_extents_t;
-
 /*
  * Loads a TrueType font face from a file.
  *
@@ -121,6 +150,10 @@ typedef struct {
  * @return  the font index, used when drawing text.
  */
 int32_t gfx_load_ttf_font(const char *path, bool all_utf8);
+
+/**
+ * @group Context & Frame Handling
+ */
 
 /**
  * Creates a new GFX context.
@@ -156,9 +189,8 @@ void gfx_begin_frame(gfx_ctx_t *ctx);
  */
 void gfx_end_frame(gfx_ctx_t *ctx);
 
-/***************************************************************************************************
- *
- * Vector Drawing
+/**
+ * @group Vector Drawing
  *
  * Vector drawing using GFX is done using paths. You first construct one or multiple paths
  * using the various functions of the path API; then call `gfx_stroke()`, `gfx_clip()`, or
@@ -171,7 +203,7 @@ void gfx_end_frame(gfx_ctx_t *ctx);
  * Calls to `gfx_set_color()`, `gfx_set_line_width()`, take effect when `gfx_stroke() or
  * `gfx_fill()` is called.
  *
- **************************************************************************************************/
+ */
 
 /**
  * Sets the color used to draw in a context.
@@ -189,9 +221,15 @@ void gfx_set_color(gfx_ctx_t *ctx, uint32_t color);
  */
 void gfx_set_line_width(gfx_ctx_t *ctx, float width);
 
+/**
+ * Specifies how end points of lines are drawn.
+ */
 typedef enum gfx_line_cap_t {
+    /** Lines start and stop exactly at their end points, in a straight line. */
     GFX_LINE_CAP_BUTT = 0,
+    /** Lines have round endings, centered on the end points. */
     GFX_LINE_CAP_ROUND = 1,
+    /** Lines have square endings, centered on the end points. */
     GFX_LINE_CAP_SQUARE = 2,
 } gfx_line_cap_t;
 
@@ -396,9 +434,8 @@ void gfx_rectangle(gfx_ctx_t *ctx, float x, float y, float w, float h);
  */
 void gfx_tex(gfx_ctx_t *ctx, int32_t tex, float x, float y);
 
-/***************************************************************************************************
- *
- * Transformations
+/**
+ * @group Transformations
  *
  * When using the path API, all co-ordinates are specified in _user space_. Drawing commands
  * submitted to X-Plane's Panel Graphics API are in _device space_: for avionics, this means
@@ -415,7 +452,7 @@ void gfx_tex(gfx_ctx_t *ctx, int32_t tex, float x, float y);
  *
  * The current transform state can be saved and restored, much like the OpenGL transorm stack.
  *
- **************************************************************************************************/
+ */
 
 /**
  * Moves the user-space origin by a given `(x, y)` vector.
@@ -465,11 +502,9 @@ void gfx_save(gfx_ctx_t *ctx);
 void gfx_restore(gfx_ctx_t *ctx);
 
 
-/***************************************************************************************************
- *
- * Text Drawing
- *
- **************************************************************************************************/
+/**
+ * @group Text Drawing
+ */
 
 /**
  * Sets the font used for bitmap text drawing.

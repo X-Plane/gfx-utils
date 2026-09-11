@@ -1,0 +1,1954 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+    <title>gfx.h</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+ <meta name="generator" content="HeaderDoc">
+<meta name="xcode-display" content="render">
+<style type="text/css"><!--.char {background: #ffffff; color:#0000ff;}.comment {background:#ffffff; color:#236e25}.function {background:#ffffff; color:#000000;}.keyword {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.param {background:#ffffff; color:#000000;}.preprocessor {background:#ffffff; color:#236e25}.string {background: #ffffff; color:#891315;}.template {background:#ffffff; color:#761550;}.type {background:#ffffff; color:#761550;}.var {background:#ffffff; color:#000000;}body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style>
+<style><!--
+body {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+.toc_contents_text {
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+ul.tocSubEntryList li.tocSubEntry {
+    list-style: none;
+}
+
+#colorbox {
+		display: none;
+}
+.spec_sheet_line {
+		margin-bottom: 1px;
+}
+.collapsible {
+		display: none;
+}
+.toc_leadspace {
+		width: 10; min-width: 10;
+}
+.disclosure_triangle_td {
+		width: 14; min-width: 14;
+		font-size: 10px;
+		vertical-align: middle;
+}
+.specbox td {
+		font-size: 13px;
+}
+.specbox td a {
+		font-size: 13px;
+}
+.specbox td code {
+		font-size: 13px;
+}
+.specbox td tt {
+		font-size: 13px;
+}
+.specbox td pre {
+		font-size: 13px;
+}
+.specbox a {
+		font-size: 12px;
+}
+.disclosure_triangle_td a {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:link {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:active {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:visited:hover {
+		text-decoration: none;
+}
+.disclosure_triangle_td a:hover {
+		text-decoration: none;
+}
+.hd_toc_box {
+		padding-top: 10px;
+		padding-right: 15px;
+}.tocSeparator {
+		margin-top: 15px;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+}
+.tocSubEntryList {
+		margin-left: 0px;
+		padding-left: 40px;
+		padding-top: 0px;
+		margin-top: 2px;
+		padding-bottom: 0px;
+		margin-bottom: 8px;
+}
+.hd_toc_heading_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.hd_toc_entry_table {
+		margin-top: 2px;
+		margin-bottom: 2px;
+}
+.tocSubEntry {
+		margin-left: 0px;
+		padding-left: 0px;
+		margin-top: 0px;
+		margin-bottom: 1px;
+}
+.tocSubEntry a {
+		font-size: 10pt;
+}
+.tocSubheading {
+		padding-left: 14px;
+		margin-left: 0px;
+		margin-top: 5px;
+		padding-top: 0px;
+		font-size: 16px;
+		color: #808080;
+}
+
+#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }
+#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }
+#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }
+
+#tocMenu {
+		border-right: 1px solid #c0c0c0;
+		background-color: #f4f4ff;
+		top:0px;
+		left:0px;
+		width:230px;
+		height:100%;
+}
+#bodyContents {
+		width: auto;
+		padding-left: 15px;
+}
+--></style>
+<style id="disable_before_iOS_5"><!--
+#tocMenu {
+		position: fixed;
+		height: 100%;
+		overflow: auto;
+}
+#bodyContents {
+		width: auto;
+		left: 235px;
+		right: 0;
+		padding-left: 15px;
+		position: fixed;
+		height: 100%;
+		overflow-y: scroll;
+}
+--></style>
+<script language="JavaScript" type="text/javascript"><!--
+    if (navigator.platform && (navigator.platform.match(/iPad/) || navigator.platform.match(/iPhone/) || navigator.platform.match(/iPod/))) {
+        if (navigator.userAgent.match(/OS 1(_\d)+/) ||
+            navigator.userAgent.match(/OS 2(_\d)+/) ||
+            navigator.userAgent.match(/OS 3(_\d)+/) ||
+            navigator.userAgent.match(/OS 4(_\d)+/)) {
+                /* Earlier iOS versions require different scrolling gestures with position: fixed. */
+                var del_style_elt = document.getElementById("disable_before_iOS_5");
+                if (del_style_elt) del_style_elt.parentNode.removeChild(del_style_elt);
+        }
+    }
+// --></script>
+<script language="JavaScript" type="text/javascript"><!--
+function getNewHTTPObject()
+{
+        var xmlhttp;
+
+        /** Special IE only code ... */
+        /*@cc_on
+          @if (@_jscript_version >= 5)
+              try
+              {
+                  xmlhttp = new ActiveXObject('Msxml2.XMLHTTP');
+              }
+              catch (e)
+              {
+                  try
+                  {
+                      xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+                  }
+                  catch (E)
+                  {
+                      xmlhttp = false;
+                  }
+             }
+          @else
+             xmlhttp = false;
+        @end @*/
+
+        /** Every other browser on the planet */
+        if (!xmlhttp && typeof XMLHttpRequest != 'undefined')
+        {
+            try
+            {
+                xmlhttp = new XMLHttpRequest();
+            }
+            catch (e)
+            {
+                xmlhttp = false;
+            }
+        }
+
+        return xmlhttp;
+}
+
+function hidetoc() {
+	var toc = document.getElementById('tocMenu');
+	var src = toc.getAttribute('src');
+	var xhr = getNewHTTPObject();
+	xhr.open('GET', src, true);
+	xhr.onreadystatechange = function() {
+		if(xhr.readyState == 4) {
+			var toc = document.getElementById('tocMenu');
+			toc.innerHTML = xhr.responseText;
+		}
+	}
+	xhr.send(null);
+	var origURL = parent.document.URL;
+	var contentURL = origURL.substring(origURL.indexOf('?')+1, origURL.length);
+	if (contentURL.length == origURL.length) {
+		jumpPos = origURL.substring(origURL.indexOf('#')+1, origURL.length);
+	}
+	if (contentURL == "hidetoc") {
+		var body = document.getElementById('bodyContents');
+		if (toc && body) {
+			toc.style.display = 'none';
+			body.style.marginLeft = '0px';
+		}
+	}
+}
+
+function disclosure_triangle(elt) {
+   var linkelt = elt;
+   while (elt && elt.tagName != 'TABLE') { elt = elt.parentNode;}
+   if (!elt) { return; }
+   while (elt && elt.tagName != 'DIV') { elt = elt.nextSibling;}
+   if (!elt) { return; }
+   if (parseInt(linkelt.getAttribute('state'))) {
+      // It's open.  Close it
+      linkelt.innerHTML = '&#x25B7;';
+      linkelt.setAttribute('state', 0);
+      linkelt.setAttribute('class', 'closed_disclosure_triangle');
+      elt.style.display = 'none';
+   } else {
+      // It's closed.  Open it
+      linkelt.innerHTML = '&#x25BC;';
+      linkelt.setAttribute('state', 1);
+      linkelt.setAttribute('class', 'open_disclosure_triangle');
+      elt.style.display = 'block';
+   }
+}
+--></script>
+<style type="text/css"><!--.char {background: #ffffff; color:#0000ff;}.comment {background:#ffffff; color:#236e25}.function {background:#ffffff; color:#000000;}.keyword {background:#ffffff; color:#761550;}.number {background: #ffffff; color:#0000ff;}.param {background:#ffffff; color:#000000;}.preprocessor {background:#ffffff; color:#236e25}.string {background: #ffffff; color:#891315;}.template {background:#ffffff; color:#761550;}.type {background:#ffffff; color:#761550;}.var {background:#ffffff; color:#000000;}body {border: 0px; margin: 0px;}div {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}td {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}span.hd_tocAccessSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroupSpace { display: block; font-size: 1px; height: 3px; min-height: 3px; }span.hd_tocGroup { display: block; font-weight: bold; font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; margin-left: 0px; padding-left: 40px; }span.hd_tocGroup + span.hd_tocAccess { padding-top: 5px; }td.toc_contents_text {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000; }li.tocSubEntry {font-size: 11pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}p {font-size: 10pt; text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #000000;}a:link {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:visited:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:active {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}a:hover {text-decoration: underline; font-family: lucida grande, geneva, helvetica, arial, sans-serif; color: #36c;}h2.h2tight { margin-top: 0px; padding-top: 0px; }h1 { margin-top: 13px; padding-top: 0px; }h4 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: tiny; font-weight: bold;}h5 {text-decoration: none; font-family: lucida grande, geneva, helvetica, arial, sans-serif; font-size: 10.1pt; font-weight: bold;}pre {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666; font-size: 10pt;}pre a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}pre a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}pre a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}code a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}code a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a { font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt;}tt a:link { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:visited:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:active { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}tt a:hover { font-family: Courier, Consolas, monospace; color: #36c;font-size: 10pt;}body  {text-decoration: none; font-family: Courier, Consolas, monospace; color: #666;font-size: 10pt; padding-left: 0px; padding-top: 0px; margin-left: 0px; margin-top: 0px; border: none; }#hd_outermost_table { margin-left: 0px; border-spacing: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; }#hd_outermost_table > tbody > tr { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-left: 0px; padding-top: 0px; border: none; }#hd_outermost_table > tbody > tr > td { border-spacing: 0px; margin-left: 0px; margin-top: 0px; padding-top: 3px; }.afterName { display: none; }.list_indent { margin-left: 40px; }.declaration_indent { margin-left: 40px; margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; min-height: 12px; vertical-align: middle; }.declaration_indent pre { margin-top: 20px; padding-top: 0px; margin-bottom: 20px; padding-bottom: 0px; }.gapBeforeFooter { display: none; }hr { height: 0px; min-height: 0px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #909090;}hr.afterHeader { display: none }.param_group_indent { margin-left: 25px; }.param_indent { margin-left: 40px; margin-top: 0px; padding-top: 0px; }.param_indent dl { margin-top: 4px; padding-top: 0px; }dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.param_indent dl dd > p:first-child { margin-top: 2px; padding-top: 0px; }.group_indent { margin-left: 40px; }.group_desc_indent { margin-left: 20px; }.warning_indent { margin-left: 40px; }.important_indent { margin-left: 40px; }.note_indent { margin-left: 40px; }h3 {       color: #3C4C6C;}.tight {       margin-top: 2px; margin-bottom: 0px;       padding-top: 0px; padding-bottom: 0px;}h3 a {       color: #3C4C6C;	font-size: 16px;	font-style: normal;	font-variant: normal;	font-weight: bold;	height: 0px;	line-height: normal;}.hd_tocAccess { display: block; margin-left: 40px; font-style: italic; font-size: 10px; font-weight: normal; color: #303030; }.tocSubheading { margin-bottom: 4px; }--></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+<!-- headerDoc=Header;  uid=//apple_ref/doc/header/gfx.h;   name=gfx.h -->
+<a name="//apple_ref/doc/header/gfx.h"></a>
+<table id="hd_outermost_table" height="100%" width="100%"><tr>
+<td valign="top" id="tocMenu" src="toc.html"></td>
+<!-- start of header -->
+
+<!-- end of header -->
+<td id="bodyContents" valign="top">
+<a name="top"></a>
+<h1><a name="gfx.h">gfx.h</a></h1>
+<div class="spec_sheet_info_box"><table cellspacing="0" class="specbox">
+<tr>
+<td scope="row"><b>Includes:</b></td>
+<td><div style="margin-bottom:1px"><div class="content_text">
+<!-- a logicalPath="//apple_ref/doc/header/XPLMPanelGraphics.h" machineGenerated="true" -->&lt;XPLMPanelGraphics.h&gt;<!-- /a --><br>
+<!-- a logicalPath="//apple_ref/doc/header/stdbool.h" machineGenerated="true" -->&lt;stdbool.h&gt;<!-- /a --><br>
+<!-- a logicalPath="//apple_ref/doc/header/stdint.h" machineGenerated="true" -->&lt;stdint.h&gt;<!-- /a -->
+</div></div></td>
+</tr>
+</table></div>
+<h2>Introduction</h2>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/doc/header/gfx.h;name=start --><p>Canvas-like API for X-Plane 12.4.4+ XPLMPanelGraphics drawing.
+</p>
+<p>GFX abstracts away XPLMPanelGraphics' vertices, and instead provides you with a stateful
+canvas-like API to draw lines, arcs, Bézier curves, TTF- and bitmap-font text.<!-- headerDoc=discussion;uid=//apple_ref/doc/header/gfx.h;name=end --><!-- end discussion -->
+</p>
+<hr class="afterClassOrHeaderInfo">
+<br><a name="HeaderDoc_groups"><h2 class="h2tight">Groups</h2></a>
+
+<h3>Transformations</h3>
+<div class="group_desc_indent">
+<p>
+</p>
+<p>When using the path API, all co-ordinates are specified in _user space_. Drawing commands
+submitted to X-Plane's Panel Graphics API are in _device space_: for avionics, this means
+the x and y axes originate at the bottom left of the device screen, and increase up and
+right; for windows, the x and y axes originate at the bottom left of the desktop space, and
+increase up and right.
+</p>
+<p>When a new frame starts (by calling `gfx_new_frame()`), user space and device space are
+the same. However, it can be useful to _transform_ user space, so co-ordinates are easier to
+work with. For example, when drawing a map, it is easier to rotate the the axes by the current
+aircraft's heading, than doing the rotation maths for each point drawn on the map.
+</p>
+<p>The transformation API is how the user space to device space relation is modified.
+</p>
+<p>The current transform state can be saved and restored, much like the OpenGL transorm stack.</p>
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_reset" logicalPath="//apple_ref/c/func/gfx_reset" target="_top">gfx_reset</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_restore" logicalPath="//apple_ref/c/func/gfx_restore" target="_top">gfx_restore</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_rotate" logicalPath="//apple_ref/c/func/gfx_rotate" target="_top">gfx_rotate</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_save" logicalPath="//apple_ref/c/func/gfx_save" target="_top">gfx_save</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_scale" logicalPath="//apple_ref/c/func/gfx_scale" target="_top">gfx_scale</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_translate" logicalPath="//apple_ref/c/func/gfx_translate" target="_top">gfx_translate</a></tt></dt>
+<dd></dd>
+</dl>
+</div>
+<p> </p>
+<h3>Resource Loading</h3>
+<div class="group_desc_indent">
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_bitmap_font_desc_t" logicalPath="//apple_ref/c/tdef/gfx_bitmap_font_desc_t" target="_top">gfx_bitmap_font_desc_t</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_load_bitmap_font" logicalPath="//apple_ref/c/func/gfx_load_bitmap_font" target="_top">gfx_load_bitmap_font</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_text_align_t" logicalPath="//apple_ref/c/tdef/gfx_text_align_t" target="_top">gfx_text_align_t</a></tt></dt>
+<dd></dd>
+</dl>
+</div>
+<p> </p>
+<h3>Text Drawing</h3>
+<div class="group_desc_indent">
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_set_bitmap_font" logicalPath="//apple_ref/c/func/gfx_set_bitmap_font" target="_top">gfx_set_bitmap_font</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_set_font_face" logicalPath="//apple_ref/c/func/gfx_set_font_face" target="_top">gfx_set_font_face</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_set_font_size" logicalPath="//apple_ref/c/func/gfx_set_font_size" target="_top">gfx_set_font_size</a></tt></dt>
+<dd></dd>
+</dl>
+</div>
+<p> </p>
+<h3>Vector Drawing</h3>
+<div class="group_desc_indent">
+<p>
+</p>
+<p>Vector drawing using GFX is done using paths. You first construct one or multiple paths
+using the various functions of the path API; then call `gfx_stroke()`, `gfx_clip()`, or
+`gfx_fill()` to paint the path onto the context.
+</p>
+<p>A path can contain multiple _sub paths_: every time `gfx_move_to()` is called, a new
+sub-path is created. When calling `gfx_stroke()`, distinct sub-paths are drawn
+disconnected.
+</p>
+<p>Calls to `gfx_set_color()`, `gfx_set_line_width()`, take effect when `gfx_stroke() or
+`gfx_fill()` is called.</p>
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_arc" logicalPath="//apple_ref/c/func/gfx_arc" target="_top">gfx_arc</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_arc_negative" logicalPath="//apple_ref/c/func/gfx_arc_negative" target="_top">gfx_arc_negative</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_clip" logicalPath="//apple_ref/c/func/gfx_clip" target="_top">gfx_clip</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_clip_preserve" logicalPath="//apple_ref/c/func/gfx_clip_preserve" target="_top">gfx_clip_preserve</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_clip_reset" logicalPath="//apple_ref/c/func/gfx_clip_reset" target="_top">gfx_clip_reset</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_close_path" logicalPath="//apple_ref/c/func/gfx_close_path" target="_top">gfx_close_path</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_curve_to" logicalPath="//apple_ref/c/func/gfx_curve_to" target="_top">gfx_curve_to</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_fill" logicalPath="//apple_ref/c/func/gfx_fill" target="_top">gfx_fill</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_fill_preserve" logicalPath="//apple_ref/c/func/gfx_fill_preserve" target="_top">gfx_fill_preserve</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_line_cap_t" logicalPath="//apple_ref/c/tdef/gfx_line_cap_t" target="_top">gfx_line_cap_t</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_line_to" logicalPath="//apple_ref/c/func/gfx_line_to" target="_top">gfx_line_to</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_move_to" logicalPath="//apple_ref/c/func/gfx_move_to" target="_top">gfx_move_to</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_rectangle" logicalPath="//apple_ref/c/func/gfx_rectangle" target="_top">gfx_rectangle</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_set_color" logicalPath="//apple_ref/c/func/gfx_set_color" target="_top">gfx_set_color</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_set_line_cap" logicalPath="//apple_ref/c/func/gfx_set_line_cap" target="_top">gfx_set_line_cap</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_set_line_width" logicalPath="//apple_ref/c/func/gfx_set_line_width" target="_top">gfx_set_line_width</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_stroke" logicalPath="//apple_ref/c/func/gfx_stroke" target="_top">gfx_stroke</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_stroke_fast" logicalPath="//apple_ref/c/func/gfx_stroke_fast" target="_top">gfx_stroke_fast</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_stroke_preserve" logicalPath="//apple_ref/c/func/gfx_stroke_preserve" target="_top">gfx_stroke_preserve</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_tex" logicalPath="//apple_ref/c/func/gfx_tex" target="_top">gfx_tex</a></tt></dt>
+<dd></dd>
+</dl>
+</div>
+<p> </p>
+<h3>Context &amp; Frame Handling</h3>
+<div class="group_desc_indent">
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_begin_frame" logicalPath="//apple_ref/c/func/gfx_begin_frame" target="_top">gfx_begin_frame</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_destroy" logicalPath="//apple_ref/c/func/gfx_destroy" target="_top">gfx_destroy</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_end_frame" logicalPath="//apple_ref/c/func/gfx_end_frame" target="_top">gfx_end_frame</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_new" logicalPath="//apple_ref/c/func/gfx_new" target="_top">gfx_new</a></tt></dt>
+<dd></dd>
+</dl>
+</div>
+<p> </p>
+<h3>Shared state management</h3>
+<div class="group_desc_indent">
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_bake_shared" logicalPath="//apple_ref/c/func/gfx_bake_shared" target="_top">gfx_bake_shared</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_fini_shared" logicalPath="//apple_ref/c/func/gfx_fini_shared" target="_top">gfx_fini_shared</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_init_shared" logicalPath="//apple_ref/c/func/gfx_init_shared" target="_top">gfx_init_shared</a></tt></dt>
+<dd></dd>
+</dl>
+</div>
+<p> </p>
+<h3>Color utilities.</h3>
+<div class="group_desc_indent">
+</div>
+<h4>Group members:</h4>
+<div class="group_indent">
+<dl>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_color_mult" logicalPath="//apple_ref/c/func/gfx_color_mult" target="_top">gfx_color_mult</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_load_tex" logicalPath="//apple_ref/c/func/gfx_load_tex" target="_top">gfx_load_tex</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_load_tex_atlas" logicalPath="//apple_ref/c/func/gfx_load_tex_atlas" target="_top">gfx_load_tex_atlas</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_rgb" logicalPath="//apple_ref/c/func/gfx_rgb" target="_top">gfx_rgb</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_rgba" logicalPath="//apple_ref/c/func/gfx_rgba" target="_top">gfx_rgba</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_rgbaf" logicalPath="//apple_ref/c/func/gfx_rgbaf" target="_top">gfx_rgbaf</a></tt></dt>
+<dd></dd>
+<dt><tt><a machinegenerated="true" href="#//apple_ref/c/func/gfx_rgbf" logicalPath="//apple_ref/c/func/gfx_rgbf" target="_top">gfx_rgbf</a></tt></dt>
+<dd></dd>
+</dl>
+</div>
+<hr class="afterGroupHeading">
+<a name="HeaderDoc_functions"></a>
+<h2 class="h2tight">Functions</h2>
+<dl>
+<dt><tt><a href="#//apple_ref/c/func/gfx_arc" target="_top">gfx_arc</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_arc_negative" target="_top">gfx_arc_negative</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_bake_shared" target="_top">gfx_bake_shared</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_begin_frame" target="_top">gfx_begin_frame</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_clip" target="_top">gfx_clip</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_clip_preserve" target="_top">gfx_clip_preserve</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_clip_reset" target="_top">gfx_clip_reset</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_close_path" target="_top">gfx_close_path</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_color_mult" target="_top">gfx_color_mult</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_curve_to" target="_top">gfx_curve_to</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_destroy" target="_top">gfx_destroy</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_end_frame" target="_top">gfx_end_frame</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_fill" target="_top">gfx_fill</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_fill_preserve" target="_top">gfx_fill_preserve</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_fini_shared" target="_top">gfx_fini_shared</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_init_shared" target="_top">gfx_init_shared</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_line_to" target="_top">gfx_line_to</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_load_bitmap_font" target="_top">gfx_load_bitmap_font</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_load_tex" target="_top">gfx_load_tex</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_load_tex_atlas" target="_top">gfx_load_tex_atlas</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_move_to" target="_top">gfx_move_to</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_new" target="_top">gfx_new</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_rectangle" target="_top">gfx_rectangle</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_reset" target="_top">gfx_reset</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_restore" target="_top">gfx_restore</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_rgb" target="_top">gfx_rgb</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_rgba" target="_top">gfx_rgba</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_rgbaf" target="_top">gfx_rgbaf</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_rgbf" target="_top">gfx_rgbf</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_rotate" target="_top">gfx_rotate</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_save" target="_top">gfx_save</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_scale" target="_top">gfx_scale</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_set_bitmap_font" target="_top">gfx_set_bitmap_font</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_set_color" target="_top">gfx_set_color</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_set_font_face" target="_top">gfx_set_font_face</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_set_font_size" target="_top">gfx_set_font_size</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_set_line_cap" target="_top">gfx_set_line_cap</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_set_line_width" target="_top">gfx_set_line_width</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_stroke" target="_top">gfx_stroke</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_stroke_fast" target="_top">gfx_stroke_fast</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_stroke_preserve" target="_top">gfx_stroke_preserve</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_tex" target="_top">gfx_tex</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/func/gfx_translate" target="_top">gfx_translate</a></tt></dt>
+<dd></dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_arc;   name=gfx_arc -->
+<a name="//apple_ref/c/func/gfx_arc"></a>
+<h3><a name="gfx_arc">gfx_arc</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_arc;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_arc" logicalPath="//apple_ref/c/instm/gfx_arc //apple_ref/c/clm/gfx_arc //apple_ref/c/intfcm/gfx_arc //apple_ref/c/intfm/gfx_arc //apple_ref/c/func/gfx_arc" target="_top"><span class="function">gfx_arc</span></a>( 
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">x</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">y</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">radius</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">angle_start</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">angle_end</span> );  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_arc;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_arc/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_arc/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_arc/x;   name=x -->
+<a name="//apple_ref/doc/functionparam/gfx_arc/x"></a>
+<code>x</code>
+</dt>
+<dd><p>x co-ordinate of the arc center.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_arc/y;   name=y -->
+<a name="//apple_ref/doc/functionparam/gfx_arc/y"></a>
+<code>y</code>
+</dt>
+<dd><p>y co-ordinate of the arc center.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_arc/angle_start;   name=angle_start -->
+<a name="//apple_ref/doc/functionparam/gfx_arc/angle_start"></a>
+<code>angle_start</code>
+</dt>
+<dd><p>Angle at which the arc begins.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_arc/angle_end;   name=angle_end -->
+<a name="//apple_ref/doc/functionparam/gfx_arc/angle_end"></a>
+<code>angle_end</code>
+</dt>
+<dd><p>Angle at which the arc begins.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_arc;name=start --><p>Adds an circular arc of the given `radius` to the current path.
+</p>
+<p>The arc is centered at `(x, y)` at the centre, begins at `angle_start`,
+and progresses in the direction of increasing angles to `angle_end`.
+</p>
+<p>Angles are in radians; the point at 0 radians lies on the x-axis, and angles
+increase counter-clockwise.
+</p>
+<p>After this call, the path's current point is the point on the arc at `angle_end`.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_arc;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_arc_negative;   name=gfx_arc_negative -->
+<a name="//apple_ref/c/func/gfx_arc_negative"></a>
+<h3><a name="gfx_arc_negative">gfx_arc_negative</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_arc_negative;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_arc_negative" logicalPath="//apple_ref/c/instm/gfx_arc_negative //apple_ref/c/clm/gfx_arc_negative //apple_ref/c/intfcm/gfx_arc_negative //apple_ref/c/intfm/gfx_arc_negative //apple_ref/c/func/gfx_arc_negative" target="_top"><span class="function">gfx_arc_negative</span></a>( 
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">x</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">y</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">radius</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">angle_start</span>, 
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">angle_end</span> );  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_arc_negative;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_arc_negative/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_arc_negative/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_arc_negative/x;   name=x -->
+<a name="//apple_ref/doc/functionparam/gfx_arc_negative/x"></a>
+<code>x</code>
+</dt>
+<dd><p>x co-ordinate of the arc center.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_arc_negative/y;   name=y -->
+<a name="//apple_ref/doc/functionparam/gfx_arc_negative/y"></a>
+<code>y</code>
+</dt>
+<dd><p>y co-ordinate of the arc center.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_arc_negative/angle_start;   name=angle_start -->
+<a name="//apple_ref/doc/functionparam/gfx_arc_negative/angle_start"></a>
+<code>angle_start</code>
+</dt>
+<dd><p>Angle at which the arc begins.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_arc_negative/angle_end;   name=angle_end -->
+<a name="//apple_ref/doc/functionparam/gfx_arc_negative/angle_end"></a>
+<code>angle_end</code>
+</dt>
+<dd><p>Angle at which the arc begins.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_arc_negative;name=start --><p>Adds an circular arc of the given `radius` to the current path.
+</p>
+<p>The arc is centered at `(x, y)` at the centre, begins at `angle_start`,
+and progresses in the direction of decreasing angles to `angle_end`.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_arc_negative;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_bake_shared;   name=gfx_bake_shared -->
+<a name="//apple_ref/c/func/gfx_bake_shared"></a>
+<h3><a name="gfx_bake_shared">gfx_bake_shared</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_bake_shared;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_bake_shared" logicalPath="//apple_ref/c/instm/gfx_bake_shared //apple_ref/c/clm/gfx_bake_shared //apple_ref/c/intfcm/gfx_bake_shared //apple_ref/c/intfm/gfx_bake_shared //apple_ref/c/func/gfx_bake_shared" target="_top"><span class="function">gfx_bake_shared</span></a>();  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_bake_shared;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_bake_shared;name=start --><p>Bakes any texture atlases needed by GFX objects. Call once all your GFX contexts
+are done with initialisation, and you do not need to create any more resources.
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_bake_shared;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_begin_frame;   name=gfx_begin_frame -->
+<a name="//apple_ref/c/func/gfx_begin_frame"></a>
+<h3><a name="gfx_begin_frame">gfx_begin_frame</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_begin_frame;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_begin_frame" logicalPath="//apple_ref/c/instm/gfx_begin_frame //apple_ref/c/clm/gfx_begin_frame //apple_ref/c/intfcm/gfx_begin_frame //apple_ref/c/intfm/gfx_begin_frame //apple_ref/c/func/gfx_begin_frame" target="_top"><span class="function">gfx_begin_frame</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_begin_frame;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_begin_frame/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_begin_frame/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_begin_frame;name=start --><p>Starts a new rendering frame.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_begin_frame;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_clip;   name=gfx_clip -->
+<a name="//apple_ref/c/func/gfx_clip"></a>
+<h3><a name="gfx_clip">gfx_clip</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_clip;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_clip" logicalPath="//apple_ref/c/instm/gfx_clip //apple_ref/c/clm/gfx_clip //apple_ref/c/intfcm/gfx_clip //apple_ref/c/intfm/gfx_clip //apple_ref/c/func/gfx_clip" target="_top"><span class="function">gfx_clip</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_clip;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_clip/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_clip/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_clip;name=start --><p>Uses a context's current path as a convex polygon to create a clipping area,
+and discard the path.
+</p>
+<p>Any drawing submitted after `gfx_clip()` and before `gfx_clip_reset()` is only shown when
+it lies within the polygon's area.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_clip;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_clip_preserve;   name=gfx_clip_preserve -->
+<a name="//apple_ref/c/func/gfx_clip_preserve"></a>
+<h3><a name="gfx_clip_preserve">gfx_clip_preserve</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_clip_preserve;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_clip_preserve" logicalPath="//apple_ref/c/instm/gfx_clip_preserve //apple_ref/c/clm/gfx_clip_preserve //apple_ref/c/intfcm/gfx_clip_preserve //apple_ref/c/intfm/gfx_clip_preserve //apple_ref/c/func/gfx_clip_preserve" target="_top"><span class="function">gfx_clip_preserve</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_clip_preserve;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_clip_preserve/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_clip_preserve/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_clip_preserve;name=start --><p>Uses a context's current path as a convex polygon to create a clipping area,
+and keep the path.
+</p>
+<p>Any drawing submitted after `gfx_clip()` and before `gfx_clip_reset()` is only shown when
+it lies within the polygon's area.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_clip_preserve;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_clip_reset;   name=gfx_clip_reset -->
+<a name="//apple_ref/c/func/gfx_clip_reset"></a>
+<h3><a name="gfx_clip_reset">gfx_clip_reset</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_clip_reset;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_clip_reset" logicalPath="//apple_ref/c/instm/gfx_clip_reset //apple_ref/c/clm/gfx_clip_reset //apple_ref/c/intfcm/gfx_clip_reset //apple_ref/c/intfm/gfx_clip_reset //apple_ref/c/func/gfx_clip_reset" target="_top"><span class="function">gfx_clip_reset</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_clip_reset;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_clip_reset/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_clip_reset/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_clip_reset;name=start --><p>Discard a context's current clipping area.
+</p>
+
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_clip_reset;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_close_path;   name=gfx_close_path -->
+<a name="//apple_ref/c/func/gfx_close_path"></a>
+<h3><a name="gfx_close_path">gfx_close_path</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_close_path;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_close_path" logicalPath="//apple_ref/c/instm/gfx_close_path //apple_ref/c/clm/gfx_close_path //apple_ref/c/intfcm/gfx_close_path //apple_ref/c/intfm/gfx_close_path //apple_ref/c/func/gfx_close_path" target="_top"><span class="function">gfx_close_path</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_close_path;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_close_path/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_close_path/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_close_path;name=start --><p>Closes the current sub-path, by adding a point in the same location as the
+sub-path's first point.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_close_path;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_color_mult;   name=gfx_color_mult -->
+<a name="//apple_ref/c/func/gfx_color_mult"></a>
+<h3><a name="gfx_color_mult">gfx_color_mult</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_color_mult;name=start --><!-- a logicalPath="//apple_ref/c/cl/uint32_t //apple_ref/c/tdef/uint32_t //apple_ref/c/tag/uint32_t //apple_ref/c/struct/uint32_t //apple_ref/c/intf/uint32_t //apple_ref/doc/anysymbol/uint32_t" machineGenerated="true" --><span class="type">uint32_t</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_color_mult" logicalPath="//apple_ref/c/instm/gfx_color_mult //apple_ref/c/clm/gfx_color_mult //apple_ref/c/intfcm/gfx_color_mult //apple_ref/c/intfm/gfx_color_mult //apple_ref/c/func/gfx_color_mult" target="_top"><span class="function">gfx_color_mult</span></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/uint32_t //apple_ref/c/tdef/uint32_t //apple_ref/c/tag/uint32_t //apple_ref/c/struct/uint32_t //apple_ref/c/intf/uint32_t //apple_ref/doc/anysymbol/uint32_t" machineGenerated="true" --><span class="type">uint32_t</span><!-- /a --> <span class="param">c</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">m</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_color_mult;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_color_mult;name=start --><p>Multiplies each component of a colour by a scalar.
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_color_mult;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_curve_to;   name=gfx_curve_to -->
+<a name="//apple_ref/c/func/gfx_curve_to"></a>
+<h3><a name="gfx_curve_to">gfx_curve_to</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_curve_to;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_curve_to" logicalPath="//apple_ref/c/instm/gfx_curve_to //apple_ref/c/clm/gfx_curve_to //apple_ref/c/intfcm/gfx_curve_to //apple_ref/c/intfm/gfx_curve_to //apple_ref/c/func/gfx_curve_to" target="_top"><span class="function">gfx_curve_to</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">x1</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">y1</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">x2</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">y2</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">x3</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">y3</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_curve_to;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_curve_to/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_curve_to/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_curve_to/x1;   name=x1 -->
+<a name="//apple_ref/doc/functionparam/gfx_curve_to/x1"></a>
+<code>x1</code>
+</dt>
+<dd><p>x co-ordinate of the first control point.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_curve_to/y1;   name=y1 -->
+<a name="//apple_ref/doc/functionparam/gfx_curve_to/y1"></a>
+<code>y1</code>
+</dt>
+<dd><p>y co-ordinate of the first control point.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_curve_to/x2;   name=x2 -->
+<a name="//apple_ref/doc/functionparam/gfx_curve_to/x2"></a>
+<code>x2</code>
+</dt>
+<dd><p>x co-ordinate of the second control point.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_curve_to/y2;   name=y2 -->
+<a name="//apple_ref/doc/functionparam/gfx_curve_to/y2"></a>
+<code>y2</code>
+</dt>
+<dd><p>y co-ordinate of the second control point.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_curve_to/x3;   name=x3 -->
+<a name="//apple_ref/doc/functionparam/gfx_curve_to/x3"></a>
+<code>x3</code>
+</dt>
+<dd><p>x co-ordinate of the curve's end point.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_curve_to/y3;   name=y3 -->
+<a name="//apple_ref/doc/functionparam/gfx_curve_to/y3"></a>
+<code>y3</code>
+</dt>
+<dd><p>y co-ordinate of the curve's end point.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_curve_to;name=start --><p>Adds a cubic bezier curve to the current path.
+</p>
+<p>The curve joins the current point to `(x3, y3)`, with `(x1, y1)` and `(x2, y2)`
+as control points. If there is no current point, the curve begins at `(x1, y1)`.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_curve_to;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_destroy;   name=gfx_destroy -->
+<a name="//apple_ref/c/func/gfx_destroy"></a>
+<h3><a name="gfx_destroy">gfx_destroy</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_destroy;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_destroy" logicalPath="//apple_ref/c/instm/gfx_destroy //apple_ref/c/clm/gfx_destroy //apple_ref/c/intfcm/gfx_destroy //apple_ref/c/intfm/gfx_destroy //apple_ref/c/func/gfx_destroy" target="_top"><span class="function">gfx_destroy</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_destroy;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_destroy/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_destroy/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>A pointer to the context to destroy.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_destroy;name=start --><p>Destroys a GFX context.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_destroy;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_end_frame;   name=gfx_end_frame -->
+<a name="//apple_ref/c/func/gfx_end_frame"></a>
+<h3><a name="gfx_end_frame">gfx_end_frame</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_end_frame;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_end_frame" logicalPath="//apple_ref/c/instm/gfx_end_frame //apple_ref/c/clm/gfx_end_frame //apple_ref/c/intfcm/gfx_end_frame //apple_ref/c/intfm/gfx_end_frame //apple_ref/c/func/gfx_end_frame" target="_top"><span class="function">gfx_end_frame</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_end_frame;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_end_frame/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_end_frame/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_end_frame;name=start --><p>Ends the rendering frame.
+</p>
+<p>No work is done, but this allows the context to check that the rendering calls were
+well-formed, and that context save &amp; restores are well balanced.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_end_frame;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_fill;   name=gfx_fill -->
+<a name="//apple_ref/c/func/gfx_fill"></a>
+<h3><a name="gfx_fill">gfx_fill</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_fill;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_fill" logicalPath="//apple_ref/c/instm/gfx_fill //apple_ref/c/clm/gfx_fill //apple_ref/c/intfcm/gfx_fill //apple_ref/c/intfm/gfx_fill //apple_ref/c/func/gfx_fill" target="_top"><span class="function">gfx_fill</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_fill;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_fill/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_fill/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_fill;name=start --><p>Fills a context's current path as a convex polygon, and discards the path.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_fill;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_fill_preserve;   name=gfx_fill_preserve -->
+<a name="//apple_ref/c/func/gfx_fill_preserve"></a>
+<h3><a name="gfx_fill_preserve">gfx_fill_preserve</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_fill_preserve;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_fill_preserve" logicalPath="//apple_ref/c/instm/gfx_fill_preserve //apple_ref/c/clm/gfx_fill_preserve //apple_ref/c/intfcm/gfx_fill_preserve //apple_ref/c/intfm/gfx_fill_preserve //apple_ref/c/func/gfx_fill_preserve" target="_top"><span class="function">gfx_fill_preserve</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_fill_preserve;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_fill_preserve/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_fill_preserve/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_fill_preserve;name=start --><p>Fills a context's current path as a convex polygon, and keep the path.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_fill_preserve;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_fini_shared;   name=gfx_fini_shared -->
+<a name="//apple_ref/c/func/gfx_fini_shared"></a>
+<h3><a name="gfx_fini_shared">gfx_fini_shared</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_fini_shared;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_fini_shared" logicalPath="//apple_ref/c/instm/gfx_fini_shared //apple_ref/c/clm/gfx_fini_shared //apple_ref/c/intfcm/gfx_fini_shared //apple_ref/c/intfm/gfx_fini_shared //apple_ref/c/func/gfx_fini_shared" target="_top"><span class="function">gfx_fini_shared</span></a>();  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_fini_shared;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_fini_shared;name=start --><p>Frees any memory used by GFX shared resources. Call once at plugin teardown.
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_fini_shared;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_init_shared;   name=gfx_init_shared -->
+<a name="//apple_ref/c/func/gfx_init_shared"></a>
+<h3><a name="gfx_init_shared">gfx_init_shared</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_init_shared;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_init_shared" logicalPath="//apple_ref/c/instm/gfx_init_shared //apple_ref/c/clm/gfx_init_shared //apple_ref/c/intfcm/gfx_init_shared //apple_ref/c/intfm/gfx_init_shared //apple_ref/c/func/gfx_init_shared" target="_top"><span class="function">gfx_init_shared</span></a>();  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_init_shared;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_init_shared;name=start --><p>Initialises shared resources used by the GFX layer. Call once at plugin start.
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_init_shared;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_line_to;   name=gfx_line_to -->
+<a name="//apple_ref/c/func/gfx_line_to"></a>
+<h3><a name="gfx_line_to">gfx_line_to</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_line_to;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_line_to" logicalPath="//apple_ref/c/instm/gfx_line_to //apple_ref/c/clm/gfx_line_to //apple_ref/c/intfcm/gfx_line_to //apple_ref/c/intfm/gfx_line_to //apple_ref/c/func/gfx_line_to" target="_top"><span class="function">gfx_line_to</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">x</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">y</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_line_to;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_line_to/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_line_to/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_line_to/x;   name=x -->
+<a name="//apple_ref/doc/functionparam/gfx_line_to/x"></a>
+<code>x</code>
+</dt>
+<dd><p>x co-ordinate of the new point.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_line_to/y;   name=y -->
+<a name="//apple_ref/doc/functionparam/gfx_line_to/y"></a>
+<code>y</code>
+</dt>
+<dd><p>x co-ordinate of the new point.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_line_to;name=start --><p>Adds a line to the current path, from the current position to the new co-ordinates.
+</p>
+<p>If there is no current position, calling `gfx_line_to()` is equivalent to
+calling `gfx_move_to()`.
+</p>
+<p>After this call, the current point will be `(x, y)`.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_line_to;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_load_bitmap_font;   name=gfx_load_bitmap_font -->
+<a name="//apple_ref/c/func/gfx_load_bitmap_font"></a>
+<h3><a name="gfx_load_bitmap_font">gfx_load_bitmap_font</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_load_bitmap_font;name=start --><!-- a logicalPath="//apple_ref/c/cl/int32_t //apple_ref/c/tdef/int32_t //apple_ref/c/tag/int32_t //apple_ref/c/struct/int32_t //apple_ref/c/intf/int32_t //apple_ref/doc/anysymbol/int32_t" machineGenerated="true" --><span class="type">int32_t</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_load_bitmap_font" logicalPath="//apple_ref/c/instm/gfx_load_bitmap_font //apple_ref/c/clm/gfx_load_bitmap_font //apple_ref/c/intfcm/gfx_load_bitmap_font //apple_ref/c/intfm/gfx_load_bitmap_font //apple_ref/c/func/gfx_load_bitmap_font" target="_top"><span class="function">gfx_load_bitmap_font</span></a>(
+    <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/char //apple_ref/c/tdef/char //apple_ref/c/tag/char //apple_ref/c/struct/char //apple_ref/c/intf/char //apple_ref/doc/anysymbol/char" machineGenerated="true" --><span class="type">char</span><!-- /a --> <span class="type">*</span><span class="param">path</span>,
+    <span class="keyword">const</span> <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_bitmap_font_desc_t" logicalPath="//apple_ref/c/cl/gfx_bitmap_font_desc_t //apple_ref/c/tdef/gfx_bitmap_font_desc_t" target="_top"><span class="type">gfx_bitmap_font_desc_t</span></a> <span class="type">*</span><span class="param">desc</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_load_bitmap_font;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_load_bitmap_font/path;   name=path -->
+<a name="//apple_ref/doc/functionparam/gfx_load_bitmap_font/path"></a>
+<code>path</code>
+</dt>
+<dd><p>the absolute path to the PNG file.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_load_bitmap_font/desc;   name=desc -->
+<a name="//apple_ref/doc/functionparam/gfx_load_bitmap_font/desc"></a>
+<code>desc</code>
+</dt>
+<dd><p>the loader description for the font.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>the font index, used when drawing text. 
+
+<!-- end return value --></p>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_load_bitmap_font;name=start --><p>Loads a bitmap font from an atlas file.
+</p>
+<p>The atlas is assumed to contain 16 columns by 4 rows.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_load_bitmap_font;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_load_tex;   name=gfx_load_tex -->
+<a name="//apple_ref/c/func/gfx_load_tex"></a>
+<h3><a name="gfx_load_tex">gfx_load_tex</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_load_tex;name=start --><!-- a logicalPath="//apple_ref/c/cl/int32_t //apple_ref/c/tdef/int32_t //apple_ref/c/tag/int32_t //apple_ref/c/struct/int32_t //apple_ref/c/intf/int32_t //apple_ref/doc/anysymbol/int32_t" machineGenerated="true" --><span class="type">int32_t</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_load_tex" logicalPath="//apple_ref/c/instm/gfx_load_tex //apple_ref/c/clm/gfx_load_tex //apple_ref/c/intfcm/gfx_load_tex //apple_ref/c/intfm/gfx_load_tex //apple_ref/c/func/gfx_load_tex" target="_top"><span class="function">gfx_load_tex</span></a>(
+    <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/char //apple_ref/c/tdef/char //apple_ref/c/tag/char //apple_ref/c/struct/char //apple_ref/c/intf/char //apple_ref/doc/anysymbol/char" machineGenerated="true" --><span class="type">char</span><!-- /a --> <span class="type">*</span><span class="param">path</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_load_tex;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_load_tex/path;   name=path -->
+<a name="//apple_ref/doc/functionparam/gfx_load_tex/path"></a>
+<code>path</code>
+</dt>
+<dd><p>the absolute path to the PNG file.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>a valid texture index, or -1 if texture load failed.
+
+<!-- end return value --></p>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_load_tex;name=start --><p>Loads one texture from a PNG file, and adds it to a shared atlas.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_load_tex;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_load_tex_atlas;   name=gfx_load_tex_atlas -->
+<a name="//apple_ref/c/func/gfx_load_tex_atlas"></a>
+<h3><a name="gfx_load_tex_atlas">gfx_load_tex_atlas</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_load_tex_atlas;name=start --><!-- a logicalPath="//apple_ref/c/cl/int32_t //apple_ref/c/tdef/int32_t //apple_ref/c/tag/int32_t //apple_ref/c/struct/int32_t //apple_ref/c/intf/int32_t //apple_ref/doc/anysymbol/int32_t" machineGenerated="true" --><span class="type">int32_t</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_load_tex_atlas" logicalPath="//apple_ref/c/instm/gfx_load_tex_atlas //apple_ref/c/clm/gfx_load_tex_atlas //apple_ref/c/intfcm/gfx_load_tex_atlas //apple_ref/c/intfm/gfx_load_tex_atlas //apple_ref/c/func/gfx_load_tex_atlas" target="_top"><span class="function">gfx_load_tex_atlas</span></a>(
+    <span class="keyword">const</span> <!-- a logicalPath="//apple_ref/c/cl/char //apple_ref/c/tdef/char //apple_ref/c/tag/char //apple_ref/c/struct/char //apple_ref/c/intf/char //apple_ref/doc/anysymbol/char" machineGenerated="true" --><span class="type">char</span><!-- /a --> <span class="type">*</span><span class="param">path</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">col</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="param">row</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="type">*</span><span class="param">w</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/int //apple_ref/c/tdef/int //apple_ref/c/tag/int //apple_ref/c/struct/int //apple_ref/c/intf/int //apple_ref/doc/anysymbol/int" machineGenerated="true" --><span class="type">int</span><!-- /a --> <span class="type">*</span><span class="param">h</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_load_tex_atlas;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_load_tex_atlas/path;   name=path -->
+<a name="//apple_ref/doc/functionparam/gfx_load_tex_atlas/path"></a>
+<code>path</code>
+</dt>
+<dd><p>the absolute path to the PNG file.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_load_tex_atlas/col;   name=col -->
+<a name="//apple_ref/doc/functionparam/gfx_load_tex_atlas/col"></a>
+<code>col</code>
+</dt>
+<dd><p>the number of columns in the atlas.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_load_tex_atlas/row;   name=row -->
+<a name="//apple_ref/doc/functionparam/gfx_load_tex_atlas/row"></a>
+<code>row</code>
+</dt>
+<dd><p>the number of rows in the atlas.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_load_tex_atlas/w;   name=w -->
+<a name="//apple_ref/doc/functionparam/gfx_load_tex_atlas/w"></a>
+<code>w</code>
+</dt>
+<dd><p>a pointer to an integer, will be filled with the width of each atlas tile.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_load_tex_atlas/h;   name=h -->
+<a name="//apple_ref/doc/functionparam/gfx_load_tex_atlas/h"></a>
+<code>h</code>
+</dt>
+<dd><p>a pointer to an integer, will be filled with the height of each atlas tile.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>the texture index of the first atlas tile, or -1 if texture load failed.
+
+<!-- end return value --></p>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_load_tex_atlas;name=start --><p>Loads one texture atlas from a PNG file.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_load_tex_atlas;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_move_to;   name=gfx_move_to -->
+<a name="//apple_ref/c/func/gfx_move_to"></a>
+<h3><a name="gfx_move_to">gfx_move_to</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_move_to;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_move_to" logicalPath="//apple_ref/c/instm/gfx_move_to //apple_ref/c/clm/gfx_move_to //apple_ref/c/intfcm/gfx_move_to //apple_ref/c/intfm/gfx_move_to //apple_ref/c/func/gfx_move_to" target="_top"><span class="function">gfx_move_to</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">x</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">y</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_move_to;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_move_to/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_move_to/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_move_to/x;   name=x -->
+<a name="//apple_ref/doc/functionparam/gfx_move_to/x"></a>
+<code>x</code>
+</dt>
+<dd><p>x co-ordinate of the new point.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_move_to/y;   name=y -->
+<a name="//apple_ref/doc/functionparam/gfx_move_to/y"></a>
+<code>y</code>
+</dt>
+<dd><p>x co-ordinate of the new point.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_move_to;name=start --><p>Begin a new sub-path in a context. If the current path already has point, there will
+be a gap between the last point and the new co-ordinates.
+</p>
+<p>After this call, the current point will be `(x, y)`.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_move_to;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_new;   name=gfx_new -->
+<a name="//apple_ref/c/func/gfx_new"></a>
+<h3><a name="gfx_new">gfx_new</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_new;name=start --><a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><a machinegenerated="true" href="#//apple_ref/c/func/gfx_new" logicalPath="//apple_ref/c/instm/gfx_new //apple_ref/c/clm/gfx_new //apple_ref/c/intfcm/gfx_new //apple_ref/c/intfm/gfx_new //apple_ref/c/func/gfx_new" target="_top"><span class="function">gfx_new</span></a>();  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_new;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+<p><!-- begin return value --></p>
+<p>A pointer to the new context.
+
+<!-- end return value --></p>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_new;name=start --><p>Creates a new GFX context.
+</p>
+<p>Contexts keep track of the transform stack, draw colour, line width,
+and active bitmap and TTF fonts.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_new;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_rectangle;   name=gfx_rectangle -->
+<a name="//apple_ref/c/func/gfx_rectangle"></a>
+<h3><a name="gfx_rectangle">gfx_rectangle</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_rectangle;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_rectangle" logicalPath="//apple_ref/c/instm/gfx_rectangle //apple_ref/c/clm/gfx_rectangle //apple_ref/c/intfcm/gfx_rectangle //apple_ref/c/intfm/gfx_rectangle //apple_ref/c/func/gfx_rectangle" target="_top"><span class="function">gfx_rectangle</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">x</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">y</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">w</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">h</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_rectangle;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_rectangle/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_rectangle/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_rectangle/x;   name=x -->
+<a name="//apple_ref/doc/functionparam/gfx_rectangle/x"></a>
+<code>x</code>
+</dt>
+<dd><p>x co-ordinate of the lower left corner of the rectangle.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_rectangle/y;   name=y -->
+<a name="//apple_ref/doc/functionparam/gfx_rectangle/y"></a>
+<code>y</code>
+</dt>
+<dd><p>y co-ordinate of the lower left corner of the rectangle.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_rectangle/w;   name=w -->
+<a name="//apple_ref/doc/functionparam/gfx_rectangle/w"></a>
+<code>w</code>
+</dt>
+<dd><p>Width of the rectangle.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_rectangle;name=start --><p>Adds a rectangle to the current path.
+</p>
+<p>This is a convenience function, which is exactly equivalent to calling:
+</p>
+<p>gfx_move_to(ctx, x, y);
+gfx_line_to(ctx, x, y + h);
+gfx_line_to(ctx, x + w, y + h);
+gfx_line_to(ctx, x + w, y);
+gfx_close_path(ctx);
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_rectangle;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_reset;   name=gfx_reset -->
+<a name="//apple_ref/c/func/gfx_reset"></a>
+<h3><a name="gfx_reset">gfx_reset</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_reset;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_reset" logicalPath="//apple_ref/c/instm/gfx_reset //apple_ref/c/clm/gfx_reset //apple_ref/c/intfcm/gfx_reset //apple_ref/c/intfm/gfx_reset //apple_ref/c/func/gfx_reset" target="_top"><span class="function">gfx_reset</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_reset;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_reset/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_reset/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_reset;name=start --><p>Resets the user-space transform to the default (coincident with device space).
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_reset;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_restore;   name=gfx_restore -->
+<a name="//apple_ref/c/func/gfx_restore"></a>
+<h3><a name="gfx_restore">gfx_restore</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_restore;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_restore" logicalPath="//apple_ref/c/instm/gfx_restore //apple_ref/c/clm/gfx_restore //apple_ref/c/intfcm/gfx_restore //apple_ref/c/intfm/gfx_restore //apple_ref/c/func/gfx_restore" target="_top"><span class="function">gfx_restore</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_restore;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_restore/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_restore/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_restore;name=start --><p>Pops the user-space transform from the stack, and make it current.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_restore;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_rgb;   name=gfx_rgb -->
+<a name="//apple_ref/c/func/gfx_rgb"></a>
+<h3><a name="gfx_rgb">gfx_rgb</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_rgb;name=start --><!-- a logicalPath="//apple_ref/c/cl/uint32_t //apple_ref/c/tdef/uint32_t //apple_ref/c/tag/uint32_t //apple_ref/c/struct/uint32_t //apple_ref/c/intf/uint32_t //apple_ref/doc/anysymbol/uint32_t" machineGenerated="true" --><span class="type">uint32_t</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_rgb" logicalPath="//apple_ref/c/instm/gfx_rgb //apple_ref/c/clm/gfx_rgb //apple_ref/c/intfcm/gfx_rgb //apple_ref/c/intfm/gfx_rgb //apple_ref/c/func/gfx_rgb" target="_top"><span class="function">gfx_rgb</span></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/uint8_t //apple_ref/c/tdef/uint8_t //apple_ref/c/tag/uint8_t //apple_ref/c/struct/uint8_t //apple_ref/c/intf/uint8_t //apple_ref/doc/anysymbol/uint8_t" machineGenerated="true" --><span class="type">uint8_t</span><!-- /a --> <span class="param">r</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/uint8_t //apple_ref/c/tdef/uint8_t //apple_ref/c/tag/uint8_t //apple_ref/c/struct/uint8_t //apple_ref/c/intf/uint8_t //apple_ref/doc/anysymbol/uint8_t" machineGenerated="true" --><span class="type">uint8_t</span><!-- /a --> <span class="param">g</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/uint8_t //apple_ref/c/tdef/uint8_t //apple_ref/c/tag/uint8_t //apple_ref/c/struct/uint8_t //apple_ref/c/intf/uint8_t //apple_ref/doc/anysymbol/uint8_t" machineGenerated="true" --><span class="type">uint8_t</span><!-- /a --> <span class="param">b</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_rgb;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_rgb;name=start --><p>Creates a color object from red, green, and blue 8-bit components (0-255).
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_rgb;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_rgba;   name=gfx_rgba -->
+<a name="//apple_ref/c/func/gfx_rgba"></a>
+<h3><a name="gfx_rgba">gfx_rgba</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_rgba;name=start --><!-- a logicalPath="//apple_ref/c/cl/uint32_t //apple_ref/c/tdef/uint32_t //apple_ref/c/tag/uint32_t //apple_ref/c/struct/uint32_t //apple_ref/c/intf/uint32_t //apple_ref/doc/anysymbol/uint32_t" machineGenerated="true" --><span class="type">uint32_t</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_rgba" logicalPath="//apple_ref/c/instm/gfx_rgba //apple_ref/c/clm/gfx_rgba //apple_ref/c/intfcm/gfx_rgba //apple_ref/c/intfm/gfx_rgba //apple_ref/c/func/gfx_rgba" target="_top"><span class="function">gfx_rgba</span></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/uint8_t //apple_ref/c/tdef/uint8_t //apple_ref/c/tag/uint8_t //apple_ref/c/struct/uint8_t //apple_ref/c/intf/uint8_t //apple_ref/doc/anysymbol/uint8_t" machineGenerated="true" --><span class="type">uint8_t</span><!-- /a --> <span class="param">r</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/uint8_t //apple_ref/c/tdef/uint8_t //apple_ref/c/tag/uint8_t //apple_ref/c/struct/uint8_t //apple_ref/c/intf/uint8_t //apple_ref/doc/anysymbol/uint8_t" machineGenerated="true" --><span class="type">uint8_t</span><!-- /a --> <span class="param">g</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/uint8_t //apple_ref/c/tdef/uint8_t //apple_ref/c/tag/uint8_t //apple_ref/c/struct/uint8_t //apple_ref/c/intf/uint8_t //apple_ref/doc/anysymbol/uint8_t" machineGenerated="true" --><span class="type">uint8_t</span><!-- /a --> <span class="param">b</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/uint8_t //apple_ref/c/tdef/uint8_t //apple_ref/c/tag/uint8_t //apple_ref/c/struct/uint8_t //apple_ref/c/intf/uint8_t //apple_ref/doc/anysymbol/uint8_t" machineGenerated="true" --><span class="type">uint8_t</span><!-- /a --> <span class="param">a</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_rgba;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_rgba;name=start --><p>Creates a color object from red, green, blue, and alpha 8-bit components (0-255).
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_rgba;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_rgbaf;   name=gfx_rgbaf -->
+<a name="//apple_ref/c/func/gfx_rgbaf"></a>
+<h3><a name="gfx_rgbaf">gfx_rgbaf</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_rgbaf;name=start --><!-- a logicalPath="//apple_ref/c/cl/uint32_t //apple_ref/c/tdef/uint32_t //apple_ref/c/tag/uint32_t //apple_ref/c/struct/uint32_t //apple_ref/c/intf/uint32_t //apple_ref/doc/anysymbol/uint32_t" machineGenerated="true" --><span class="type">uint32_t</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_rgbaf" logicalPath="//apple_ref/c/instm/gfx_rgbaf //apple_ref/c/clm/gfx_rgbaf //apple_ref/c/intfcm/gfx_rgbaf //apple_ref/c/intfm/gfx_rgbaf //apple_ref/c/func/gfx_rgbaf" target="_top"><span class="function">gfx_rgbaf</span></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">r</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">g</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">b</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">a</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_rgbaf;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_rgbaf;name=start --><p>Creates a color object from red, green, blue, and alpha floating point components (0.0 - 1.0).
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_rgbaf;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_rgbf;   name=gfx_rgbf -->
+<a name="//apple_ref/c/func/gfx_rgbf"></a>
+<h3><a name="gfx_rgbf">gfx_rgbf</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_rgbf;name=start --><!-- a logicalPath="//apple_ref/c/cl/uint32_t //apple_ref/c/tdef/uint32_t //apple_ref/c/tag/uint32_t //apple_ref/c/struct/uint32_t //apple_ref/c/intf/uint32_t //apple_ref/doc/anysymbol/uint32_t" machineGenerated="true" --><span class="type">uint32_t</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_rgbf" logicalPath="//apple_ref/c/instm/gfx_rgbf //apple_ref/c/clm/gfx_rgbf //apple_ref/c/intfcm/gfx_rgbf //apple_ref/c/intfm/gfx_rgbf //apple_ref/c/func/gfx_rgbf" target="_top"><span class="function">gfx_rgbf</span></a>(
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">r</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">g</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">b</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_rgbf;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_rgbf;name=start --><p>Creates a color object from red, green, and blue floating point components (0.0 - 1.0).
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_rgbf;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_rotate;   name=gfx_rotate -->
+<a name="//apple_ref/c/func/gfx_rotate"></a>
+<h3><a name="gfx_rotate">gfx_rotate</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_rotate;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_rotate" logicalPath="//apple_ref/c/instm/gfx_rotate //apple_ref/c/clm/gfx_rotate //apple_ref/c/intfcm/gfx_rotate //apple_ref/c/intfm/gfx_rotate //apple_ref/c/func/gfx_rotate" target="_top"><span class="function">gfx_rotate</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">angle</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_rotate;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_rotate/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_rotate/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_rotate/angle;   name=angle -->
+<a name="//apple_ref/doc/functionparam/gfx_rotate/angle"></a>
+<code>angle</code>
+</dt>
+<dd><p>Rotation along the z axis, in radians.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_rotate;name=start --><p>Rotate the user-space axes by a given angles.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_rotate;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_save;   name=gfx_save -->
+<a name="//apple_ref/c/func/gfx_save"></a>
+<h3><a name="gfx_save">gfx_save</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_save;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_save" logicalPath="//apple_ref/c/instm/gfx_save //apple_ref/c/clm/gfx_save //apple_ref/c/intfcm/gfx_save //apple_ref/c/intfm/gfx_save //apple_ref/c/func/gfx_save" target="_top"><span class="function">gfx_save</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_save;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_save/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_save/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_save;name=start --><p>Saves the current user-space transform, and pushes it on the transform stack.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_save;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_scale;   name=gfx_scale -->
+<a name="//apple_ref/c/func/gfx_scale"></a>
+<h3><a name="gfx_scale">gfx_scale</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_scale;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_scale" logicalPath="//apple_ref/c/instm/gfx_scale //apple_ref/c/clm/gfx_scale //apple_ref/c/intfcm/gfx_scale //apple_ref/c/intfm/gfx_scale //apple_ref/c/func/gfx_scale" target="_top"><span class="function">gfx_scale</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">sx</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">sy</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_scale;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_scale/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_scale/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_scale/sx;   name=sx -->
+<a name="//apple_ref/doc/functionparam/gfx_scale/sx"></a>
+<code>sx</code>
+</dt>
+<dd><p>x-axis scaling factor.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_scale/sy;   name=sy -->
+<a name="//apple_ref/doc/functionparam/gfx_scale/sy"></a>
+<code>sy</code>
+</dt>
+<dd><p>y-axis scaling factor.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_scale;name=start --><p>Scales the user-space x- and y-axes by given factors.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_scale;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_set_bitmap_font;   name=gfx_set_bitmap_font -->
+<a name="//apple_ref/c/func/gfx_set_bitmap_font"></a>
+<h3><a name="gfx_set_bitmap_font">gfx_set_bitmap_font</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_set_bitmap_font;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_set_bitmap_font" logicalPath="//apple_ref/c/instm/gfx_set_bitmap_font //apple_ref/c/clm/gfx_set_bitmap_font //apple_ref/c/intfcm/gfx_set_bitmap_font //apple_ref/c/intfm/gfx_set_bitmap_font //apple_ref/c/func/gfx_set_bitmap_font" target="_top"><span class="function">gfx_set_bitmap_font</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/int32_t //apple_ref/c/tdef/int32_t //apple_ref/c/tag/int32_t //apple_ref/c/struct/int32_t //apple_ref/c/intf/int32_t //apple_ref/doc/anysymbol/int32_t" machineGenerated="true" --><span class="type">int32_t</span><!-- /a --> <span class="param">font_id</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_set_bitmap_font;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_set_bitmap_font/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_set_bitmap_font/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_set_bitmap_font/font_id;   name=font_id -->
+<a name="//apple_ref/doc/functionparam/gfx_set_bitmap_font/font_id"></a>
+<code>font_id</code>
+</dt>
+<dd><p>A valid bitmap font ID.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_set_bitmap_font;name=start --><p>Sets the font used for bitmap text drawing.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_set_bitmap_font;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_set_color;   name=gfx_set_color -->
+<a name="//apple_ref/c/func/gfx_set_color"></a>
+<h3><a name="gfx_set_color">gfx_set_color</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_set_color;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_set_color" logicalPath="//apple_ref/c/instm/gfx_set_color //apple_ref/c/clm/gfx_set_color //apple_ref/c/intfcm/gfx_set_color //apple_ref/c/intfm/gfx_set_color //apple_ref/c/func/gfx_set_color" target="_top"><span class="function">gfx_set_color</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/uint32_t //apple_ref/c/tdef/uint32_t //apple_ref/c/tag/uint32_t //apple_ref/c/struct/uint32_t //apple_ref/c/intf/uint32_t //apple_ref/doc/anysymbol/uint32_t" machineGenerated="true" --><span class="type">uint32_t</span><!-- /a --> <span class="param">color</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_set_color;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_set_color/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_set_color/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_set_color/color;   name=color -->
+<a name="//apple_ref/doc/functionparam/gfx_set_color/color"></a>
+<code>color</code>
+</dt>
+<dd><p>The color in which lines, polygons and text should be drawn.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_set_color;name=start --><p>Sets the color used to draw in a context.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_set_color;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_set_font_face;   name=gfx_set_font_face -->
+<a name="//apple_ref/c/func/gfx_set_font_face"></a>
+<h3><a name="gfx_set_font_face">gfx_set_font_face</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_set_font_face;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_set_font_face" logicalPath="//apple_ref/c/instm/gfx_set_font_face //apple_ref/c/clm/gfx_set_font_face //apple_ref/c/intfcm/gfx_set_font_face //apple_ref/c/intfm/gfx_set_font_face //apple_ref/c/func/gfx_set_font_face" target="_top"><span class="function">gfx_set_font_face</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/int32_t //apple_ref/c/tdef/int32_t //apple_ref/c/tag/int32_t //apple_ref/c/struct/int32_t //apple_ref/c/intf/int32_t //apple_ref/doc/anysymbol/int32_t" machineGenerated="true" --><span class="type">int32_t</span><!-- /a --> <span class="param">font_id</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_set_font_face;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_set_font_face/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_set_font_face/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_set_font_face/font_id;   name=font_id -->
+<a name="//apple_ref/doc/functionparam/gfx_set_font_face/font_id"></a>
+<code>font_id</code>
+</dt>
+<dd><p>A valid TTF font ID.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_set_font_face;name=start --><p>Sets the TTF font face used for TTF text drawing.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_set_font_face;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_set_font_size;   name=gfx_set_font_size -->
+<a name="//apple_ref/c/func/gfx_set_font_size"></a>
+<h3><a name="gfx_set_font_size">gfx_set_font_size</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_set_font_size;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_set_font_size" logicalPath="//apple_ref/c/instm/gfx_set_font_size //apple_ref/c/clm/gfx_set_font_size //apple_ref/c/intfcm/gfx_set_font_size //apple_ref/c/intfm/gfx_set_font_size //apple_ref/c/func/gfx_set_font_size" target="_top"><span class="function">gfx_set_font_size</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">size</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_set_font_size;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_set_font_size/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_set_font_size/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_set_font_size/size;   name=size -->
+<a name="//apple_ref/doc/functionparam/gfx_set_font_size/size"></a>
+<code>size</code>
+</dt>
+<dd><p>Character size.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_set_font_size;name=start --><p>Sets the character size used for TTF text drawing.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_set_font_size;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_set_line_cap;   name=gfx_set_line_cap -->
+<a name="//apple_ref/c/func/gfx_set_line_cap"></a>
+<h3><a name="gfx_set_line_cap">gfx_set_line_cap</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_set_line_cap;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_set_line_cap" logicalPath="//apple_ref/c/instm/gfx_set_line_cap //apple_ref/c/clm/gfx_set_line_cap //apple_ref/c/intfcm/gfx_set_line_cap //apple_ref/c/intfm/gfx_set_line_cap //apple_ref/c/func/gfx_set_line_cap" target="_top"><span class="function">gfx_set_line_cap</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>,
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_line_cap_t" logicalPath="//apple_ref/c/cl/gfx_line_cap_t //apple_ref/c/tdef/gfx_line_cap_t" target="_top"><span class="type">gfx_line_cap_t</span></a> <span class="param">cap</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_set_line_cap;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_set_line_cap/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_set_line_cap/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_set_line_cap/cap;   name=cap -->
+<a name="//apple_ref/doc/functionparam/gfx_set_line_cap/cap"></a>
+<code>cap</code>
+</dt>
+<dd><p>The cap with which lines should be drawn.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_set_line_cap;name=start --><p>Sets the caps with which lines should be drawn in a context.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_set_line_cap;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_set_line_width;   name=gfx_set_line_width -->
+<a name="//apple_ref/c/func/gfx_set_line_width"></a>
+<h3><a name="gfx_set_line_width">gfx_set_line_width</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_set_line_width;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_set_line_width" logicalPath="//apple_ref/c/instm/gfx_set_line_width //apple_ref/c/clm/gfx_set_line_width //apple_ref/c/intfcm/gfx_set_line_width //apple_ref/c/intfm/gfx_set_line_width //apple_ref/c/func/gfx_set_line_width" target="_top"><span class="function">gfx_set_line_width</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">width</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_set_line_width;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_set_line_width/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_set_line_width/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_set_line_width/width;   name=width -->
+<a name="//apple_ref/doc/functionparam/gfx_set_line_width/width"></a>
+<code>width</code>
+</dt>
+<dd><p>The width at which lines should be drawn.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_set_line_width;name=start --><p>Sets the width at which lines should be drawn in a context.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_set_line_width;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_stroke;   name=gfx_stroke -->
+<a name="//apple_ref/c/func/gfx_stroke"></a>
+<h3><a name="gfx_stroke">gfx_stroke</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_stroke;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_stroke" logicalPath="//apple_ref/c/instm/gfx_stroke //apple_ref/c/clm/gfx_stroke //apple_ref/c/intfcm/gfx_stroke //apple_ref/c/intfm/gfx_stroke //apple_ref/c/func/gfx_stroke" target="_top"><span class="function">gfx_stroke</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_stroke;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_stroke/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_stroke/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_stroke;name=start --><p>Draws a context's current path as a line, then discards the path.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_stroke;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_stroke_fast;   name=gfx_stroke_fast -->
+<a name="//apple_ref/c/func/gfx_stroke_fast"></a>
+<h3><a name="gfx_stroke_fast">gfx_stroke_fast</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_stroke_fast;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_stroke_fast" logicalPath="//apple_ref/c/instm/gfx_stroke_fast //apple_ref/c/clm/gfx_stroke_fast //apple_ref/c/intfcm/gfx_stroke_fast //apple_ref/c/intfm/gfx_stroke_fast //apple_ref/c/func/gfx_stroke_fast" target="_top"><span class="function">gfx_stroke_fast</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_stroke_fast;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_stroke_fast/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_stroke_fast/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_stroke_fast;name=start --><p>Draws a context's current path as a line, then discards the path.
+</p>
+<p>Unlike `gfx_stroke(gfx_ctx_t *)`, this does check whether the path is closed or not,
+and just submits the vertices as-is to `XPLMLinesWithWidth()`.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_stroke_fast;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_stroke_preserve;   name=gfx_stroke_preserve -->
+<a name="//apple_ref/c/func/gfx_stroke_preserve"></a>
+<h3><a name="gfx_stroke_preserve">gfx_stroke_preserve</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_stroke_preserve;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_stroke_preserve" logicalPath="//apple_ref/c/instm/gfx_stroke_preserve //apple_ref/c/clm/gfx_stroke_preserve //apple_ref/c/intfcm/gfx_stroke_preserve //apple_ref/c/intfm/gfx_stroke_preserve //apple_ref/c/func/gfx_stroke_preserve" target="_top"><span class="function">gfx_stroke_preserve</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_stroke_preserve;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_stroke_preserve/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_stroke_preserve/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_stroke_preserve;name=start --><p>Draws a context's current path as a line, and keep the path.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_stroke_preserve;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_tex;   name=gfx_tex -->
+<a name="//apple_ref/c/func/gfx_tex"></a>
+<h3><a name="gfx_tex">gfx_tex</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_tex;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_tex" logicalPath="//apple_ref/c/instm/gfx_tex //apple_ref/c/clm/gfx_tex //apple_ref/c/intfcm/gfx_tex //apple_ref/c/intfm/gfx_tex //apple_ref/c/func/gfx_tex" target="_top"><span class="function">gfx_tex</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/int32_t //apple_ref/c/tdef/int32_t //apple_ref/c/tag/int32_t //apple_ref/c/struct/int32_t //apple_ref/c/intf/int32_t //apple_ref/doc/anysymbol/int32_t" machineGenerated="true" --><span class="type">int32_t</span><!-- /a --> <span class="param">tex</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">x</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">y</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_tex;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_tex/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_tex/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_tex/tex;   name=tex -->
+<a name="//apple_ref/doc/functionparam/gfx_tex/tex"></a>
+<code>tex</code>
+</dt>
+<dd><p>Texture applied to the rectangle.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_tex/x;   name=x -->
+<a name="//apple_ref/doc/functionparam/gfx_tex/x"></a>
+<code>x</code>
+</dt>
+<dd><p>x co-ordinate of the lower left corner of the rectangle.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_tex/y;   name=y -->
+<a name="//apple_ref/doc/functionparam/gfx_tex/y"></a>
+<code>y</code>
+</dt>
+<dd><p>y co-ordinate of the lower left corner of the rectangle.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_tex;name=start --><p>Draws a rectangle at a given point, with a given texture applied to it.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_tex;name=end --><!-- end discussion -->
+<hr class="betweenAPIEntries">
+<!-- headerDoc=func;  uid=//apple_ref/c/func/gfx_translate;   name=gfx_translate -->
+<a name="//apple_ref/c/func/gfx_translate"></a>
+<h3><a name="gfx_translate">gfx_translate</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_translate;name=start --><!-- a logicalPath="//apple_ref/c/cl/void //apple_ref/c/tdef/void //apple_ref/c/tag/void //apple_ref/c/struct/void //apple_ref/c/intf/void //apple_ref/doc/anysymbol/void" machineGenerated="true" --><span class="type">void</span><!-- /a --> <a machinegenerated="true" href="#//apple_ref/c/func/gfx_translate" logicalPath="//apple_ref/c/instm/gfx_translate //apple_ref/c/clm/gfx_translate //apple_ref/c/intfcm/gfx_translate //apple_ref/c/intfm/gfx_translate //apple_ref/c/func/gfx_translate" target="_top"><span class="function">gfx_translate</span></a>(
+    <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <span class="type">*</span><span class="param">ctx</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">x</span>,
+    <!-- a logicalPath="//apple_ref/c/cl/float //apple_ref/c/tdef/float //apple_ref/c/tag/float //apple_ref/c/struct/float //apple_ref/c/intf/float //apple_ref/doc/anysymbol/float" machineGenerated="true" --><span class="type">float</span><!-- /a --> <span class="param">y</span>);  <!-- headerDoc=declaration;uid=//apple_ref/c/func/gfx_translate;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+<div class="param_indent">
+<dl>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_translate/ctx;   name=ctx -->
+<a name="//apple_ref/doc/functionparam/gfx_translate/ctx"></a>
+<code>ctx</code>
+</dt>
+<dd><p>Pointer to the context.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_translate/x;   name=x -->
+<a name="//apple_ref/doc/functionparam/gfx_translate/x"></a>
+<code>x</code>
+</dt>
+<dd><p>Translation along the x axis.</p></dd>
+<dt>
+<!-- headerDoc=functionparam;  uid=//apple_ref/doc/functionparam/gfx_translate/y;   name=y -->
+<a name="//apple_ref/doc/functionparam/gfx_translate/y"></a>
+<code>y</code>
+</dt>
+<dd><p>Translation along the y axis.</p></dd>
+</dl>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_translate;name=start --><p>Moves the user-space origin by a given `(x, y)` vector.
+</p>
+<!-- headerDoc=discussion;uid=//apple_ref/c/func/gfx_translate;name=end --><!-- end discussion -->
+<hr class="betweenSections">
+<a name="HeaderDoc_datatypes"></a>
+<h2 class="h2tight">Typedefs</h2>
+<dl>
+<dt><tt><a href="#//apple_ref/c/tdef/gfx_bitmap_font_desc_t" target="_top">gfx_bitmap_font_desc_t</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/tdef/gfx_ctx_t" target="_top">gfx_ctx_t</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/tdef/gfx_line_cap_t" target="_top">gfx_line_cap_t</a></tt></dt>
+<dd></dd>
+<dt><tt><a href="#//apple_ref/c/tdef/gfx_text_align_t" target="_top">gfx_text_align_t</a></tt></dt>
+<dd></dd>
+</dl>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/gfx_bitmap_font_desc_t;   name=gfx_bitmap_font_desc_t -->
+<a name="//apple_ref/c/tdef/gfx_bitmap_font_desc_t"></a>
+<h3><a name="gfx_bitmap_font_desc_t">gfx_bitmap_font_desc_t</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/tdef/gfx_bitmap_font_desc_t;name=start --><span class="keyword">typedef</span> <span class="keyword">struct</span> { 
+    <span class="comment">/** The ASCII code for the first character represented in the font atlas. </span>
+        <span class="comment">*/</span>
+    <!-- a logicalPath="//apple_ref/c/cl/char //apple_ref/c/tdef/char //apple_ref/c/tag/char //apple_ref/c/struct/char //apple_ref/c/intf/char //apple_ref/doc/anysymbol/char" machineGenerated="true" --><span class="type">char</span><!-- /a --> <!-- a logicalPath="//apple_ref/c/econst/first_char //apple_ref/c/data/first_char //apple_ref/c/clconst/first_char " machineGenerated="true" --><span class="var">first_char</span><!-- /a -->; 
+    <span class="comment">/** The number of characters contained in the font atlas. */</span>
+    <!-- a logicalPath="//apple_ref/c/cl/int32_t //apple_ref/c/tdef/int32_t //apple_ref/c/tag/int32_t //apple_ref/c/struct/int32_t //apple_ref/c/intf/int32_t //apple_ref/doc/anysymbol/int32_t" machineGenerated="true" --><span class="type">int32_t</span><!-- /a --> <!-- a logicalPath="//apple_ref/c/econst/char_count //apple_ref/c/data/char_count //apple_ref/c/clconst/char_count " machineGenerated="true" --><span class="var">char_count</span><!-- /a -->; 
+    <span class="comment">/** Whether the dot character is drawn at full width, or half width. </span>
+        <span class="comment">*/</span>
+    <!-- a logicalPath="//apple_ref/c/cl/bool //apple_ref/c/tdef/bool //apple_ref/c/tag/bool //apple_ref/c/struct/bool //apple_ref/c/intf/bool //apple_ref/doc/anysymbol/bool" machineGenerated="true" --><span class="type">bool</span><!-- /a --> <!-- a logicalPath="//apple_ref/c/econst/short_dot //apple_ref/c/data/short_dot //apple_ref/c/clconst/short_dot " machineGenerated="true" --><span class="var">short_dot</span><!-- /a -->; 
+} <!-- a logicalPath="//apple_ref/c/econst/gfx_bitmap_font_desc_t //apple_ref/c/data/gfx_bitmap_font_desc_t //apple_ref/c/clconst/gfx_bitmap_font_desc_t " machineGenerated="true" --><span class="var">gfx_bitmap_font_desc_t</span><!-- /a -->;  <!-- headerDoc=declaration;uid=//apple_ref/c/tdef/gfx_bitmap_font_desc_t;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/tdef/gfx_bitmap_font_desc_t;name=start --><p>Parameters used when loading a bitmap font file.
+<!-- headerDoc=discussion;uid=//apple_ref/c/tdef/gfx_bitmap_font_desc_t;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/gfx_ctx_t;   name=gfx_ctx_t -->
+<a name="//apple_ref/c/tdef/gfx_ctx_t"></a>
+<h3><a name="gfx_ctx_t">gfx_ctx_t</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/tdef/gfx_ctx_t;name=start --><span class="keyword">typedef</span> <span class="keyword">struct</span> <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_ctx_t" logicalPath="//apple_ref/c/cl/gfx_ctx_t //apple_ref/c/tdef/gfx_ctx_t" target="_top"><span class="type">gfx_ctx_t</span></a> <!-- a logicalPath="//apple_ref/c/econst/gfx_ctx_t //apple_ref/c/data/gfx_ctx_t //apple_ref/c/clconst/gfx_ctx_t " machineGenerated="true" --><span class="var">gfx_ctx_t</span><!-- /a -->;  <!-- headerDoc=declaration;uid=//apple_ref/c/tdef/gfx_ctx_t;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/tdef/gfx_ctx_t;name=start --><p>Context object, used to store the current drawing state for one window or avionics device.
+<!-- headerDoc=discussion;uid=//apple_ref/c/tdef/gfx_ctx_t;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/gfx_line_cap_t;   name=gfx_line_cap_t -->
+<a name="//apple_ref/c/tdef/gfx_line_cap_t"></a>
+<h3><a name="gfx_line_cap_t">gfx_line_cap_t</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/tdef/gfx_line_cap_t;name=start --><span class="keyword">typedef</span> <span class="keyword">enum</span> <a machinegenerated="true" href="#//apple_ref/c/tdef/gfx_line_cap_t" logicalPath="//apple_ref/c/cl/gfx_line_cap_t //apple_ref/c/tdef/gfx_line_cap_t" target="_top"><span class="type">gfx_line_cap_t</span></a> { 
+    <span class="comment">/** Lines start and stop exactly at their end points, in a straight line. </span>
+        <span class="comment">*/</span>
+    <!-- a logicalPath="//apple_ref/c/econst/GFX_LINE_CAP_BUTT //apple_ref/c/data/GFX_LINE_CAP_BUTT //apple_ref/c/clconst/GFX_LINE_CAP_BUTT " machineGenerated="true" --><span class="var">GFX_LINE_CAP_BUTT</span><!-- /a --> = <span class="number">0</span>, 
+    <span class="comment">/** Lines have round endings, centered on the end points. </span>
+        <span class="comment">*/</span>
+    <!-- a logicalPath="//apple_ref/c/econst/GFX_LINE_CAP_ROUND //apple_ref/c/data/GFX_LINE_CAP_ROUND //apple_ref/c/clconst/GFX_LINE_CAP_ROUND " machineGenerated="true" --><span class="var">GFX_LINE_CAP_ROUND</span><!-- /a --> = <span class="number">1</span>, 
+    <span class="comment">/** Lines have square endings, centered on the end points. </span>
+        <span class="comment">*/</span>
+    <!-- a logicalPath="//apple_ref/c/econst/GFX_LINE_CAP_SQUARE //apple_ref/c/data/GFX_LINE_CAP_SQUARE //apple_ref/c/clconst/GFX_LINE_CAP_SQUARE " machineGenerated="true" --><span class="var">GFX_LINE_CAP_SQUARE</span><!-- /a --> = <span class="number">2</span>, 
+} <!-- a logicalPath="//apple_ref/c/econst/gfx_line_cap_t //apple_ref/c/data/gfx_line_cap_t //apple_ref/c/clconst/gfx_line_cap_t " machineGenerated="true" --><span class="var">gfx_line_cap_t</span><!-- /a -->;  <!-- headerDoc=declaration;uid=//apple_ref/c/tdef/gfx_line_cap_t;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/tdef/gfx_line_cap_t;name=start --><p>Specifies how end points of lines are drawn.
+<!-- headerDoc=discussion;uid=//apple_ref/c/tdef/gfx_line_cap_t;name=end --><!-- end discussion -->
+</p>
+<hr class="betweenAPIEntries">
+<!-- headerDoc=tdef;  uid=//apple_ref/c/tdef/gfx_text_align_t;   name=gfx_text_align_t -->
+<a name="//apple_ref/c/tdef/gfx_text_align_t"></a>
+<h3><a name="gfx_text_align_t">gfx_text_align_t</a></h3>
+<hr class="afterName">
+<div class="declaration_indent">
+<pre><!-- headerDoc=declaration;uid=//apple_ref/c/tdef/gfx_text_align_t;name=start --><span class="keyword">typedef</span> <span class="keyword">enum</span> { 
+    <span class="comment">/** The text's left boundary is aligned with the drawing position. </span>
+        <span class="comment">*/</span>
+    <!-- a logicalPath="//apple_ref/c/econst/GFX_ALIGN_LEFT //apple_ref/c/data/GFX_ALIGN_LEFT //apple_ref/c/clconst/GFX_ALIGN_LEFT " machineGenerated="true" --><span class="var">GFX_ALIGN_LEFT</span><!-- /a -->, 
+    <span class="comment">/** Text is centered on the drawing position. */</span>
+    <!-- a logicalPath="//apple_ref/c/econst/GFX_ALIGN_CENTER //apple_ref/c/data/GFX_ALIGN_CENTER //apple_ref/c/clconst/GFX_ALIGN_CENTER " machineGenerated="true" --><span class="var">GFX_ALIGN_CENTER</span><!-- /a -->, 
+    <span class="comment">/** The text's right boundary is aligned with the drawing position. </span>
+        <span class="comment">*/</span>
+    <!-- a logicalPath="//apple_ref/c/econst/GFX_ALIGN_RIGHT //apple_ref/c/data/GFX_ALIGN_RIGHT //apple_ref/c/clconst/GFX_ALIGN_RIGHT " machineGenerated="true" --><span class="var">GFX_ALIGN_RIGHT</span><!-- /a -->, 
+} <!-- a logicalPath="//apple_ref/c/econst/gfx_text_align_t //apple_ref/c/data/gfx_text_align_t //apple_ref/c/clconst/gfx_text_align_t " machineGenerated="true" --><span class="var">gfx_text_align_t</span><!-- /a -->;  <!-- headerDoc=declaration;uid=//apple_ref/c/tdef/gfx_text_align_t;name=end --></pre>
+</div>
+<h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+<!-- begin discussion --><!-- headerDoc=discussion;uid=//apple_ref/c/tdef/gfx_text_align_t;name=start --><p>A text alignment
+<!-- headerDoc=discussion;uid=//apple_ref/c/tdef/gfx_text_align_t;name=end --><!-- end discussion -->
+</p>
+<p class="gapBeforeFooter"> </p>
+<!-- start of footer -->
+
+<!-- end of footer -->
+<hr class="afterFooter">
+<div class="hd_copyright_and_timestamp">
+<p class="hd_timestamp">Last Updated: Friday, September 11, 2026
+</p>
+</div>
+</td>
+</tr></table>
+</body>
+</html>
