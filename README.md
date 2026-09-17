@@ -57,5 +57,6 @@ void device_draw_callback() {
 API Reference
 -------------
 
-The API is documented in the header. If you find something that doesn't match the documentation,
+The API is documented in the header, and a processed version is available at
+<https://x-plane.github.io/gfx-utils>. If you find something that doesn't match the documentation,
 please let me know by emailing <amy@x-plane.com>.
